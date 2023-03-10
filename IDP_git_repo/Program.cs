@@ -25,9 +25,9 @@
             grund3.smältpunkt = 1337.33;
             grund3.kokpunkt = 3243;*/
 
-            grund1.Print();
+            /*grund1.Print();
             grund2.Print();
-            grund3.Print();
+            grund3.Print();*/
 
             Grundämne[] grunder = new Grundämne[6];
             grunder[0] = grund1;
@@ -37,6 +37,19 @@
             grunder[4] = new Grundämne("brom", 35, "ickemetall", 265.8, 332.0);
             grunder[5] = new Grundämne("kvicksilver", 80, "metall", 234.3210, 629.88);
 
+            PrintArray(grunder);
+            
+            
+            static void PrintArray(Grundämne[] grunder)
+            {
+                foreach (Grundämne i in grunder)
+                {
+                    if (i != null)
+                    {
+                        i.Print();
+                    }
+                }
+            }
 
             Console.ReadLine();
             
