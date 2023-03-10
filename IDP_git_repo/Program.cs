@@ -61,6 +61,16 @@
                 }
             }
 
+            Console.WriteLine("\nGrundämnen med smälpunkt under 273.16 K och kokpunkt över 273.16 K: ");
+
+            foreach (Grundämne punkter in grunder)
+            {
+                if (punkter.smältpunkt < 273.16 && punkter.kokpunkt > 273.16)
+                {
+                    Console.WriteLine(punkter.namn);
+                }
+            }
+
             Console.ReadLine();
             
         }
