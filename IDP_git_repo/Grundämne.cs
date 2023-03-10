@@ -14,7 +14,14 @@ namespace IDP_assg_3
         public double smältpunkt;
         public double kokpunkt;
 
-
+        public Grundämne(string aNamn, int aZ, string aTyp, double aSmältpunkt, double aKokpunkt)
+        {
+            namn= aNamn;
+            Z= aZ;
+            typ= aTyp;
+            smältpunkt = aSmältpunkt;
+            kokpunkt= aKokpunkt;
+        }
         public void Print()
         {
             Console.WriteLine($"Grundämne: {namn}");
