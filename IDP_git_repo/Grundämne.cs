@@ -26,8 +26,8 @@ namespace IDP_assg_3
         {
             Console.WriteLine($"Grundämne: {namn}");
             Console.WriteLine($"Typ: {typ}");
-            Console.WriteLine($"Smältpunkt: {smältpunkt}");
-            Console.WriteLine($"Kokpunkt: {kokpunkt}");
+            Console.WriteLine($"Smältpunkt: {smältpunkt} K");
+            Console.WriteLine($"Kokpunkt: {kokpunkt} K");
             Console.WriteLine();
         }
     }
