@@ -51,6 +51,16 @@
                 }
             }
 
+            Console.WriteLine("Metaller: ");
+
+            foreach (Grundämne metall in grunder)
+            {
+                if (metall.typ == "metall")
+                {
+                    Console.WriteLine(metall.namn);
+                }
+            }
+
             Console.ReadLine();
             
         }
