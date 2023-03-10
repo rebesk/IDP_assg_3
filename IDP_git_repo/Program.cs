@@ -25,6 +25,10 @@
             grund3.smältpunkt = 1337.33;
             grund3.kokpunkt = 3243;
 
+            grund1.Print();
+            grund2.Print();
+            grund3.Print();
+
             Console.ReadLine();
             
         }
