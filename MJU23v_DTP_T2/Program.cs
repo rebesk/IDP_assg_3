@@ -10,13 +10,13 @@ namespace MJU23v_DTP_T2
         static List<Link> links = new List<Link>();
         class Link
         {
-            public string category, group, name, descr, link;
-            public Link(string category, string group, string name, string descr, string link)
+            public string category, group, name, description, link;
+            public Link(string category, string group, string name, string description, string link)
             {
                 this.category = category;
                 this.group = group;
                 this.name = name;
-                this.descr = descr;
+                this.description = description;
                 this.link = link;
             }
 
@@ -26,12 +26,12 @@ namespace MJU23v_DTP_T2
                 category = part[0];
                 group = part[1];
                 name = part[2];
-                descr = part[3];
+                description = part[3];
                 link = part[4];
             }
             public void Print(int i)
             {
-                Console.WriteLine($"|{i,-2}|{category,-10}|{group,-10}|{name,-20}|{descr,-40}|");
+                Console.WriteLine($"|{i,-2}|{category,-10}|{group,-10}|{name,-20}|{description,-40}|");
             }
             public void OpenLink()
             {
@@ -43,12 +43,12 @@ namespace MJU23v_DTP_T2
             }
             public string ToString()
             {
-                return $"{category}|{group}|{name}|{descr}|{link}";
+                return $"{category}|{group}|{name}|{description}|{link}";
             }
         }
         static void Main(string[] args)
         {
-            string filename = @"..\..\..\links\links.lis";
+            string filename = @"..\..\..\..\..\links\links.lis";
             using (StreamReader sr = new StreamReader(filename))
             {
                 int i = 0;
@@ -56,9 +56,9 @@ namespace MJU23v_DTP_T2
                 while (line != null)
                 {
                     Console.WriteLine(line);
-                    Link L = new Link(line);
-                    L.Print(i++);
-                    links.Add(L);
+                    Link Links = new Link(line);
+                    Links.Print(i++);
+                    links.Add(Links);
                     line = sr.ReadLine();
                 }
             }
@@ -101,8 +101,8 @@ namespace MJU23v_DTP_T2
                 else if (command == "lista")
                 {
                     int i = 0;
-                    foreach (Link L in links)
-                        L.Print(i++);
+                    foreach (Link listLinks in links)
+                        listLinks.Print(i++);
                 }
                 else if (command == "ny")
                 {
@@ -114,10 +114,10 @@ namespace MJU23v_DTP_T2
                     Console.Write("  ange namn: ");
                     string name = Console.ReadLine();
                     Console.Write("  ange beskrivning: ");
-                    string descr = Console.ReadLine();
+                    string description = Console.ReadLine();
                     Console.Write("  ange länk: ");
                     string link = Console.ReadLine();
-                    Link newLink = new Link(category, group, name, descr, link);
+                    Link newLink = new Link(category, group, name, description, link);
                     links.Add(newLink);
                 }
                 else if (command == "spara")
@@ -128,9 +128,9 @@ namespace MJU23v_DTP_T2
                     }
                     using (StreamWriter sr = new StreamWriter(filename))
                     {
-                        foreach (Link L in links)
+                        foreach (Link saveLinks in links)
                         {
-                            sr.WriteLine(L.ToString());
+                            sr.WriteLine(saveLinks.ToString());
                         }
                     }
                 }
@@ -145,11 +145,11 @@ namespace MJU23v_DTP_T2
                 {
                     if (arg[1] == "grupp")
                     {
-                        foreach (Link L in links)
+                        foreach (Link openLinks in links)
                         {
-                            if (L.group == arg[2])
+                            if (openLinks.group == arg[2])
                             {
-                                L.OpenLink();
+                                openLinks.OpenLink();
                             }
                         }
                     }
