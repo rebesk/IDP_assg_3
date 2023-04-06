@@ -46,6 +46,7 @@ namespace MJU23v_DTP_T1
                     line = sr.ReadLine();
                 }
             }
+
             Console.WriteLine("==== Languages in Spain ====");
             foreach (Language L in eulangs)
             {
