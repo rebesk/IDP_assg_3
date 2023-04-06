@@ -1,4 +1,5 @@
-﻿using System.Globalization;
+﻿using System.Data;
+using System.Globalization;
 
 namespace MJU23v_DTP_T1
 {
@@ -83,6 +84,28 @@ namespace MJU23v_DTP_T1
                     sumromance += L.pop;
             }
             Console.WriteLine($"Romance speaking population: {sumromance}");
+
+            Console.Write(" > ");
+            string command = Console.ReadLine();
+
+            do
+            {
+                if (command == "help") //TODO: add more information to the lists
+                {
+                    Console.WriteLine("Choose between these commands: \n");
+                    Console.WriteLine("list group 'groupname'");
+                    Console.WriteLine("list country 'countryname'");
+                    Console.WriteLine("list between 'lownumber' and 'highnumber'");
+                    Console.WriteLine("show 'language'");
+                    Console.WriteLine("show group 'groupname'");
+                    Console.WriteLine("show country 'countryname");
+                    Console.WriteLine("show between 'lownumber' and 'highnumber'");
+                    Console.WriteLine("population group 'groupname'");
+                    Console.WriteLine("help");
+                    Console.WriteLine("quit");
+                    
+                }
+            } while (command != "quit");
         }
     }
 }
