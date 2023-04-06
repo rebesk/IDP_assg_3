@@ -90,6 +90,7 @@ namespace MJU23v_DTP_T1
 
             do
             {
+
                 if (command == "help") //TODO: add more information to the lists
                 {
                     Console.WriteLine("Choose between these commands: \n");
@@ -104,17 +105,21 @@ namespace MJU23v_DTP_T1
                     Console.WriteLine("help");
                     Console.WriteLine("quit");
                     
+                } else if (command == "list country ")
+                {
+
+                    string language = Console.ReadLine();
+
                 }
             } while (command != "quit");
         }
     }
 }
 /* Lista planering:
- * 1 . Skapa en meny med 'quit'
- * 2 . Gör en 'help' metod
- * 3 . Skapa metod för list country countryname , en lista för vilka språk som talas i det landet
- * 4 . Skapa en metod för show country countryname , visa information som cirkulerar det angivna landet
- * 5 . Skapa en metod för show language (liknande punkt 4 metodmässigt) , visa information om språket
- * 6 . Skapa en metod för list group group name , visa länder som tillhör den angivna språkgruppen
- * 7 . Skriv in resterande fråge-kommandon med //NYI - kommmentarer
+ * 1 . Skapa en grundläggande meny med 'quit' och 'help'
+ * 2 . Skapa metod för list country countryname , en lista för vilka språk som talas i det landet
+ * 3 . Skapa en metod för show country countryname , visa information som cirkulerar det angivna landet
+ * 4 . Skapa en metod för show language (liknande punkt 4 metodmässigt) , visa information om språket
+ * 5 . Skapa en metod för list group group name , visa länder som tillhör den angivna språkgruppen
+ * 6 . Skriv in resterande fråge-kommandon med //NYI - kommmentarer
  */
